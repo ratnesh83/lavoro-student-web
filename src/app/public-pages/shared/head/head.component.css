@@ -1,6 +1,9 @@
 .head{
     background: #dfe6e9;
     padding: 25px 0 25px 0;
+    position: fixed;
+    top:0;
+    width: 100%;
 }
 .logo-lavoro{
     margin: 0 5% 0 50%;
@@ -10,22 +13,21 @@
     width: 160px;
 }
 .navbar-links>.wrapper>ul>li{
-    display: inline-block;
+    display:block;
     float: right;
     padding: 5px 5px 5px 5px;
-    border: 1px solid #81ecec;
     margin: 0 10px 0 10px;
     border-radius:5%;
     font-weight: 600;
     color: #57606f;
 }
-.navbar-links>.wrapper>ul>li:active{
-    box-shadow: none;
-}
 
 .navbar-links>.wrapper>ul>li:hover{
     background:#81ecec;
     cursor: pointer; 
+}
+.active{
+    background:#81ecec;
 }
 .navbar-links>wrapper>ul{ 
     overflow: hidden;

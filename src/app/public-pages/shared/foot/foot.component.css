@@ -3,11 +3,18 @@
     color: #dfe6e9;
     font-size: 0.8em;
     padding: 40px 0 40px 0;
+    text-align: center;
 }
 p{
     margin: 2px 0 2px 0;
+    cursor: pointer;
+}
+.underline:hover{
+    text-decoration: underline;
 }
 .foot-heading{
-    font-size: 1.3em !important;
+    font-size: 1.5em !important;
     margin-bottom: 10px;
+    cursor:inherit !important;
+    text-decoration: none!important;
 }
