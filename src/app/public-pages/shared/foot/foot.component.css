@@ -1,0 +1,13 @@
+.foot{
+    background: #2d3436;
+    color: #dfe6e9;
+    font-size: 0.8em;
+    padding: 40px 0 40px 0;
+}
+p{
+    margin: 2px 0 2px 0;
+}
+.foot-heading{
+    font-size: 1.3em !important;
+    margin-bottom: 10px;
+}

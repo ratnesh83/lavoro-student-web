@@ -6,6 +6,7 @@ import { FootComponent } from './shared/foot/foot.component';
 import { HeadComponent } from './shared/head/head.component';
 import { AboutUsComponent } from './about-us/about-us.component';
 import { ContactUsComponent } from './contact-us/contact-us.component';
+import { RegisterComponent } from './register/register.component';
 
 
 
@@ -15,6 +16,6 @@ import { ContactUsComponent } from './contact-us/contact-us.component';
     CommonModule,
     PublicPagesRoutingModule
   ],
-  declarations: [PublicPagesComponent, FootComponent, HeadComponent, AboutUsComponent, ContactUsComponent]
+  declarations: [PublicPagesComponent, FootComponent, HeadComponent, AboutUsComponent, ContactUsComponent, RegisterComponent]
 })
 export class PublicPagesModule { }
