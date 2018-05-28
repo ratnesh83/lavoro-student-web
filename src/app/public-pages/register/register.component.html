@@ -1,3 +1,107 @@
-<p>
-  register works!
-</p>
+<div class="container-fluid  register">
+    <h1>Please Complete Your Details</h1>
+    <div class="row">
+        <div class="col-sm-4"></div>
+        <div class="col-sm-4">
+            <mat-card>
+                <form [formGroup]="form" (ngSubmit)="onSubmit(form.value)">
+                    <div class="field">
+                        <mat-form-field class="example-full-width">
+                            <input matInput placeholder="Email" formControlName="email">
+                        </mat-form-field>
+                        <div class="error">
+                            <div *ngIf="form.get('email').invalid && (!form.get('email').pristine || submit == true)">Please enter a valid email</div>
+                        </div>
+                    </div>
+                    <div class="field">
+                        <mat-form-field class="example-full-width">
+                            <input type="password" matInput placeholder="Password" formControlName="password">
+                        </mat-form-field>
+                        <div class="error">
+                            <div *ngIf="form.get('password').invalid && (!form.get('password').pristine || submit == true)">Please enter a password.</div>
+                        </div>
+                    </div>
+                    <div class="field">
+                        <mat-form-field class="example-full-width">
+                            <input matInput placeholder="Name" formControlName="name">
+                        </mat-form-field>
+                        <div class="error">
+                            <div *ngIf="form.get('name').invalid && (!form.get('name').pristine || submit == true)">Please enter your name</div>
+                        </div>
+                    </div>
+                    <div class="field">
+                        <mat-form-field class="example-full-width">
+                            <mat-select placeholder="Gender" formControlName="gender">
+                                <mat-option *ngFor="let gender of genders" [value]="gender.value">
+                                    {{ gender.viewValue }}
+                                </mat-option>
+                            </mat-select>
+                        </mat-form-field>
+                        <div class="error">
+                            <div *ngIf="form.get('gender').invalid && (!form.get('gender').pristine || submit == true)">Please select your gender</div>
+                        </div>
+                    </div>
+                    <div class="field">
+                        <mat-form-field class="example-full-width">
+                            <input matInput placeholder="College" formControlName="college">
+                        </mat-form-field>
+                        <div class="error">
+                            <div *ngIf="form.get('college').invalid && (!form.get('college').pristine || submit == true)">Please enter your college name</div>
+                        </div>
+                    </div>
+                    <div class="field">
+                        <mat-form-field class="example-full-width">
+                            <mat-select placeholder="Graduation Degree" formControlName="degree">
+                                <mat-option *ngFor="let degree of degrees" [value]="degree.value">
+                                    {{ degree.viewValue }}
+                                </mat-option>
+                            </mat-select>
+                        </mat-form-field>
+                        <div class="error">
+                            <div *ngIf="form.get('degree').invalid && (!form.get('degree').pristine || submit == true)">Please select a degree</div>
+                        </div>
+                    </div>
+                    <div class="field">
+                        <mat-form-field class="example-full-width">
+                            <mat-select placeholder="Stream" formControlName="stream">
+                                <mat-option *ngFor="let stream of streams" [value]="stream.value">
+                                    {{ stream.viewValue }}
+                                </mat-option>
+                            </mat-select>
+                        </mat-form-field>
+                        <div class="error">
+                            <div *ngIf="form.get('stream').invalid && (!form.get('stream').pristine || submit == true)">Please select your stream</div>
+                        </div>
+                    </div>
+                    <div class="field">
+                        <mat-form-field class="example-full-width">
+                            <mat-select placeholder="Technology" multiple formControlName="technology">
+                                <mat-option *ngFor="let technology of technologies" [value]="technology.value">
+                                    {{ technology.viewValue }}
+                                </mat-option>
+                            </mat-select>
+                        </mat-form-field>
+                        <div class="error">
+                            <div *ngIf="form.get('technology').invalid && (!form.get('technology').pristine || submit == true)">Please select your technology</div>
+                        </div>
+                    </div>
+
+                    <!-- 
+            <mat-form-field class="example-full-width">
+                <input matInput placeholder="Favorite food" value="Sushi">
+            </mat-form-field>
+            <mat-form-field>
+                <mat-select placeholder="Favorite food">
+                    <mat-option *ngFor="let food of foods" [value]="food.value">
+                        {{ food.viewValue }}
+                    </mat-option>
+                </mat-select>
+            </mat-form-field>
+            <mat-checkbox>Check me!</mat-checkbox> -->
+                    <button class="col-12">Register</button>
+                </form>
+            </mat-card>
+        </div>
+        <div class="col-sm-4"></div>
+    </div>
+</div>

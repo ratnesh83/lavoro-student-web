@@ -9,8 +9,6 @@ export class HeadComponent implements OnInit {
 
   constructor() { }
 
-  ngOnInit() {
+  ngOnInit() {    
   }
-
-
 }

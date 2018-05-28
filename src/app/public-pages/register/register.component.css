@@ -1,0 +1,38 @@
+.register{
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+form>div{
+    width: 100%;
+}
+.example-full-width{
+    width: 100%;
+}
+form{
+
+}
+h1{
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 40px;
+}
+
+button{
+    color: white;
+    font-weight: 900;
+    border-radius: 5px;
+    background: #26de81;
+    border: none;
+    margin-top: 20px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    outline: none;
+}
+.error{
+    height:10px;
+    font-size: 0.8em;
+    color: red;
+}
+/* .field{
+    padding-bottom: 0 !important;
+} */

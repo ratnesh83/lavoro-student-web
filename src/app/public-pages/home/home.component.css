@@ -1,3 +1,19 @@
 .home{
     height: 1000px;
+    padding-top:60px;
+}
+.login{
+    padding: 20px 20px 20px 20px;
+    border: 1px solid #b2bec3;
+    border-radius: 4px;
+}
+button{
+    box-shadow: none;
+}
+.form-control:focus{
+    box-shadow: none;
+    outline: none;
+}
+.login-btn:focus{
+    box-shadow: none;
 }
