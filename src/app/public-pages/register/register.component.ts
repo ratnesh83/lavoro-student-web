@@ -1,12 +1,14 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { AuthService } from '../../shared/services/auth/auth.service';
+import { ToastrService } from 'ngx-toastr';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-register',
   templateUrl: './register.component.html',
   styleUrls: ['./register.component.css'],
-  providers: [AuthService]
+  providers: [AuthService,ToastrService]
 })
 export class RegisterComponent implements OnInit {
   submit: boolean = false;
@@ -45,9 +47,8 @@ export class RegisterComponent implements OnInit {
     { value: 'Hadoop', viewValue: 'Hadoop' },
   ];
 
-
-  constructor(private auth: AuthService) { }
-
+  constructor(private auth: AuthService,private toastr:ToastrService,private router:Router) { }
+ 
   ngOnInit() {
   }
 
@@ -67,6 +68,8 @@ export class RegisterComponent implements OnInit {
     if (this.form.valid) {
       console.log(value);
       this.auth.register(value).subscribe((data) => {
+        this.toastr.success('Successfully Registered','Have Fun');
+        this.router.navigate(['/app']);
         console.log(data);
       });
     }

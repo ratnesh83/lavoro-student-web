@@ -7,5 +7,7 @@ export const environment = {
     projectId: "lavoro-softifyit",
     storageBucket: "lavoro-softifyit.appspot.com",
     messagingSenderId: "862371417619"
-  }
+  },
+  apiUrl: 'https://limitless-hollows-86199.herokuapp.com/api'
+
 };

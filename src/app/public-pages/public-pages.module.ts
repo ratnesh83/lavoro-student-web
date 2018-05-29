@@ -9,8 +9,9 @@ import { RegisterComponent } from './register/register.component';
 import { HttpClientModule } from '@angular/common/http';
 import { HttpModule } from '@angular/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import {MatInputModule, MatSelectModule, MatCheckboxModule, MatButtonModule, MatCardModule} from '@angular/material';
+import {MatInputModule, MatSelectModule, MatCheckboxModule, MatButtonModule, MatCardModule, MatDialogModule} from '@angular/material';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import { LoginDialog } from './popups/login/login.component';
 
 
 
@@ -26,8 +27,12 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
     MatSelectModule,
     MatCheckboxModule,
     MatButtonModule,
-    MatCardModule
+    MatCardModule,
+    MatDialogModule,
   ],
-  declarations: [PublicPagesComponent, HeadComponent, AboutUsComponent, ContactUsComponent, RegisterComponent]
+  entryComponents: [
+    LoginDialog
+  ],
+  declarations: [PublicPagesComponent, HeadComponent, AboutUsComponent, ContactUsComponent, RegisterComponent, LoginDialog]
 })
 export class PublicPagesModule { }

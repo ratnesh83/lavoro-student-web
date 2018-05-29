@@ -1,7 +1,8 @@
-import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { ApiService } from '../../shared/services/api.service';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
+import {Component, Inject} from '@angular/core';
+
 
 @Component({
   selector: 'app-home',
@@ -9,9 +10,13 @@ import { FormGroup, FormControl, Validators } from '@angular/forms';
   styleUrls: ['./home.component.css'],
   providers: [ApiService]
 })
-export class HomeComponent implements OnInit {
+export class HomeComponent{
+  
+  
 
   constructor(private router: Router, private api: ApiService) { }
+
+
 
   ngOnInit() {
     // this.api.login().subscribe((data) => {
